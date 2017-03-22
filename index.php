@@ -14,7 +14,7 @@ body,td,th {
 <body>           
      <h1>FDP | Planes de formación</h1>
 		<?
-            $link = mysql_connect("173.194.85.219","root","Intelygenz01") or die ("No se ha podido conectar"); 
+            $link = mysql_connect("localhost","root","Intelygenz01") or die ("No se ha podido conectar"); 
             mysql_select_db("np01_cursos") or die("Error al tratar de seleccionar esta base"); 
             $rstPlanes = mysql_query("select nombre, marco_finalidades from np01_plan") or die ("Algo falló. 3");
         ?>
