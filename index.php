@@ -14,24 +14,16 @@ body,td,th {
      <h1>FDP | Planes de formación</h1>
      
 <?php
-    //Función que nos retornara una conexión con mysqli
-    function crearConexion(){
-        //Datos para la conexión con el servidor
-        $servidor   = "173.194.85.219";
-        $nombreBD   = "np01_cursos";
-        $usuario    = "root";
-        $contrasena = "Intelygenz01";
-        //Creando la conexión, nuevo objeto mysqli
-        $conexion = new mysqli($servidor,$usuario,$contrasena,$nombreBD);
-        //Si sucede algún error la función muere e imprimir el error
-        if($conexion->connect_error){
-            die("Error en la conexion : ".$conexion->connect_errno.
-                                      "-".$conexion->connect_error);
-        }
-        //Si nada sucede retornamos la conexión
-        return $conexion;
-    }
-	
+	$servidor   = "173.194.85.219";
+	$nombreBD   = "np01_cursos";
+	$usuario    = "root";
+	$contrasena = "Intelygenz01";
+	//Creando la conexión, nuevo objeto mysqli
+	$conexion = new mysqli($servidor,$usuario,$contrasena,$nombreBD);
+	//Si sucede algún error la función muere e imprimir el error
+	if($conexion->connect_error){
+		die("Error en la conexion : ".$conexion->connect_errno."-".$conexion->connect_error);
+		}
 ?>     
 		<? /*
 			$link = new mysqli("173.194.85.219", "root", "Intelygenz01", "np01_cursos");
