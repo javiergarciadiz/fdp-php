@@ -13,7 +13,8 @@ body,td,th {
 <body>           
      <h1>FDP | Planes de formación</h1>
 		<?
-            $link = mysqli_connect("173.194.85.219","root","Intelygenz01","np01_cursos") or die ("No se ha podido conectar"); 
+			$link = new mysqli('173.194.85.219', 'root', 'Intelygenz01', 'np01_cursos');
+//            $link = mysqli_connect("173.194.85.219","root","Intelygenz01","np01_cursos") or die ("No se ha podido conectar"); 
             mysqli_select_db("np01_cursos") or die("Error al tratar de seleccionar esta base"); 
             $rstPlanes = mysqli_query("select nombre, marco_finalidades from np01_plan") or die ("Algo falló. 3");
         ?>
