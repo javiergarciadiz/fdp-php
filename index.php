@@ -2,7 +2,6 @@
 <head>
     <title>FDP | Planes de formación</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="shortcut icon" href="http://www.circulobellasartes.com/wp-content/uploads/2015/07/favicon.png?2fb0b6" type="image/x-icon" />
 <style type="text/css">
 <!--
 body,td,th {
@@ -14,7 +13,7 @@ body,td,th {
 <body>           
      <h1>FDP | Planes de formación</h1>
 		<?
-            $link = mysqli_connect("173.194.85.219","root","Intelygenz01") or die ("No se ha podido conectar"); 
+            $link = mysqli_connect("173.194.85.219","root","Intelygenz01","np01_cursos") or die ("No se ha podido conectar"); 
             mysqli_select_db("np01_cursos") or die("Error al tratar de seleccionar esta base"); 
             $rstPlanes = mysqli_query("select nombre, marco_finalidades from np01_plan") or die ("Algo falló. 3");
         ?>
