@@ -14,14 +14,14 @@ body,td,th {
 <body>           
      <h1>FDP | Planes de formación</h1>
 		<?
-            $link = mysql_connect("173.194.85.219","root","Intelygenz01") or die ("No se ha podido conectar"); 
-            mysql_select_db("np01_cursos") or die("Error al tratar de seleccionar esta base"); 
-            $rstPlanes = mysql_query("select nombre, marco_finalidades from np01_plan") or die ("Algo falló. 3");
+            $link = mysqli_connect("173.194.85.219","root","Intelygenz01") or die ("No se ha podido conectar"); 
+            mysqli_select_db("np01_cursos") or die("Error al tratar de seleccionar esta base"); 
+            $rstPlanes = mysqli_query("select nombre, marco_finalidades from np01_plan") or die ("Algo falló. 3");
         ?>
         <table width="100%">
         <tr><th align="left">Nombre</th><th align="right">Marco finalidades</th></tr>
         <?
-			while ($filaPlanes = mysql_fetch_array($rstPlanes)){
+			while ($filaPlanes = mysqli_fetch_array($rstPlanes)){
 				echo("<tr><td align=right nowrap>".$filaPlanes["nombre"]."</td><td align=right>".$filaPlanes["marco_finalidades"]."</td></tr>");
 				}	
 		?>
